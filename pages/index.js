@@ -60,8 +60,8 @@ function Index() {
   );
 }
 
-Server: "root-2-2-8 root-d3-2-2-32 secondary-2-2-5 medium-2-2-2 medium-2-2-11"
-Client: "root-2-2-8 root-d0-2-2-9 secondary-2-2-5 medium-2-2-2 medium-2-2-11"
+// Server: "root-2-2-8 root-d3-2-2-32 secondary-2-2-5 medium-2-2-2 medium-2-2-11"
+// Client: "root-2-2-8 root-d0-2-2-9 secondary-2-2-5 medium-2-2-2 medium-2-2-11"
 // https://stackoverflow.com/questions/50685175/react-material-ui-warning-prop-classname-did-not-match
 
 const Content = () => {
