@@ -64,10 +64,25 @@ function Index() {
 // Client: "root-2-2-8 root-d0-2-2-9 secondary-2-2-5 medium-2-2-2 medium-2-2-11"
 // https://stackoverflow.com/questions/50685175/react-material-ui-warning-prop-classname-did-not-match
 
+// what i know
+// 1. when I don't bring in _document and _app any CMD+R on the dev server causes dynamic styles to disappear due to mistmatch. I can 
+// see the counter before the `d` going up and up. Supposedly it's the serveer counter going up, but I'm not sure how that's happening
+// because I'm not doing any server side rendering? Tested without any of the peripherals and the client side classes seem fine every time. 
+// So what's good? I didn't know that I was getting stuff from the server for free?
+// Everything works as expected when you actually build and serve. I think it just doens't know how to treat a page reload on the dev server?
+// Like it retains information about the old classes so it creates a new instance of JSS or something?
+
+// 2. when I bring in those recommended helpers, everything works fine with homebrew styling, dynamic classes don't increase, BUT
+// mortar components STILL lose their styling.
+
 const Content = () => {
   const classes = useStyles({ color: 'orange' });
+  console.log(classes.root)
   return (
     <div>
+      <Button variant="secondary">
+        <LabelText size="large"> it's me label </LabelText>
+      </Button>
       <Button variant="secondary">
         <LabelText size="large"> it's me label </LabelText>
       </Button>
